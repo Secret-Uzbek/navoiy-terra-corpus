@@ -1,4 +1,4 @@
-# 🕌 NAVOIY-TERRA CORPUS v1.0
+# ð NAVOIY-TERRA CORPUS v1.0
 
 **First Computational Corpus of Alisher Navoi Works with Fractal Semantic Annotations**
 
@@ -8,73 +8,73 @@
 
 ---
 
-## 📚 ABOUT
+## ð ABOUT
 
 **Navoiy-Terra** is the first open-access computational corpus of **Alisher Navoi's** (1441-1501) literary works built on **Fractal Metascience Paradigm (FMP)** principles.
 
 **Created for:** V International Symposium "Navoiy va Sharq Renessansi"  
-**Date:** February 9, 2026 | Navoiy, Uzbekistan 🇺🇿
+**Date:** February 9, 2026 | Navoiy, Uzbekistan ðºð¿
 
 ### What's Inside:
-- ✅ **26 authentic texts** in Classical Uzbek (Chagatai)
-- ✅ **9-language PLT layer** — unprecedented multilingual semantic mapping
-- ✅ **Interactive D3.js visualization** of mystical concepts
-- ✅ **JSON-LD annotations** ready for NLP/ML processing
-- ✅ **2,800-word methodology paper** — peer-ready research
-- ✅ **Zero budget** — built entirely on open-source tools
+- â **26 authentic texts** in Classical Uzbek (Chagatai)
+- â **9-language PLT layer** â unprecedented multilingual semantic mapping
+- â **Interactive D3.js visualization** of mystical concepts
+- â **JSON-LD annotations** ready for NLP/ML processing
+- â **2,800-word methodology paper** â peer-ready research
+- â **Zero budget** â built entirely on open-source tools
 
 ---
 
-## 🔤 NINE-LANGUAGE PLT LAYER
+## ð¤ NINE-LANGUAGE PLT LAYER
 
 **Unique feature:** Every term mapped to **9 languages**:
 
-🇺🇿 **Chagatai** (source) → 🇺🇿 Uzbek | 🇷🇺 Russian | 🇬🇧 English | 🇩🇪 German  
-🇨🇳 **Uyghur** | 🇦🇫 Dari | 🇦🇫 Pashto | 🇮🇷 Farsi
+ðºð¿ **Chagatai** (source) â ðºð¿ Uzbek | ð·ðº Russian | ð¬ð§ English | ð©ðª German  
+ð¨ð³ **Uyghur** | ð¦ð« Dari | ð¦ð« Pashto | ð®ð· Farsi
 
 **Global reach:** 2+ billion potential readers across the Turko-Persian-Iranian cultural sphere!
 
 Example PLT mapping for **"ishq"** (divine love):
 ```json
 {
-  "chagatai": "عشق",
+  "chagatai": "Ø¹Ø´Ù",
   "uzbek": ["sevgi", "muhabbat"],
-  "russian": ["любовь", "страсть"],
+  "russian": ["Ð»ÑÐ±Ð¾Ð²Ñ", "ÑÑÑÐ°ÑÑÑ"],
   "english": ["love", "passionate devotion"],
   "german": ["Liebe", "Leidenschaft"],
-  "uyghur": ["ئەشق", "مۇھەببەت"],
-  "dari": ["عشق", "محبت"],
-  "pashto": ["عشق", "مینه"],
-  "farsi": ["عشق", "محبت"]
+  "uyghur": ["Ø¦ÛØ´Ù", "ÙÛÚ¾ÛØ¨Ø¨ÛØª"],
+  "dari": ["Ø¹Ø´Ù", "ÙØ­Ø¨Øª"],
+  "pashto": ["Ø¹Ø´Ù", "ÙÛÙÙ"],
+  "farsi": ["Ø¹Ø´Ù", "ÙØ­Ø¨Øª"]
 }
 ```
 
 ---
 
-## 📦 REPOSITORY STRUCTURE
+## ð¦ REPOSITORY STRUCTURE
 
 ```
 navoiy-terra-corpus/
-├── texts/
-│   ├── ghazals_uzbek.txt         # 13 ghazals from Hazoin ul-maoniy
-│   └── short_forms_uzbek.txt     # 8 rubai + 5 tuyuq
-├── annotations/
-│   ├── semantic_lexicon_v1.json          # Original 5-language lexicon
-│   └── semantic_lexicon_v1.1_expanded.json  # NEW: 9-language expansion
-├── analysis/
-│   └── semantic_network.html     # Interactive D3.js visualization
-├── docs/
-│   ├── METHODOLOGY.md            # Research methodology (2,800 words)
-│   ├── CITATION.md               # Citation formats
-│   └── SYMPOSIUM_EMAIL.md        # Email templates
-├── CORPUS_MANIFEST.md
-├── CORPUS_STATISTICS.md
-└── README.md
+âââ texts/
+â   âââ ghazals_uzbek.txt         # 13 ghazals from Hazoin ul-maoniy
+â   âââ short_forms_uzbek.txt     # 8 rubai + 5 tuyuq
+âââ annotations/
+â   âââ semantic_lexicon_v1.json          # Original 5-language lexicon
+â   âââ semantic_lexicon_v1.1_expanded.json  # NEW: 9-language expansion
+âââ analysis/
+â   âââ semantic_network.html     # Interactive D3.js visualization
+âââ docs/
+â   âââ METHODOLOGY.md            # Research methodology (2,800 words)
+â   âââ CITATION.md               # Citation formats
+â   âââ SYMPOSIUM_EMAIL.md        # Email templates
+âââ CORPUS_MANIFEST.md
+âââ CORPUS_STATISTICS.md
+âââ README.md
 ```
 
 ---
 
-## 📊 CORPUS STATISTICS
+## ð CORPUS STATISTICS
 
 | Metric | Count |
 |--------|-------|
@@ -87,15 +87,15 @@ navoiy-terra-corpus/
 | **Translation units** | 103 |
 
 ### Top 5 Terms by Frequency:
-1. **yor** (beloved) — 201 occurrences
-2. **ko'ngul** (heart) — 156
-3. **ishq** (love) — 127
-4. **husn** (beauty) — 112
-5. **oh** (sigh) — 94
+1. **yor** (beloved) â 201 occurrences
+2. **ko'ngul** (heart) â 156
+3. **ishq** (love) â 127
+4. **husn** (beauty) â 112
+5. **oh** (sigh) â 94
 
 ---
 
-## 🚀 QUICK START
+## ð QUICK START
 
 ### For Literary Scholars:
 1. Browse **texts/** for Navoi's works
@@ -118,12 +118,12 @@ for term in lexicon['terms']:
 
 ---
 
-## 🔬 METHODOLOGY: FRACTAL METASCIENCE PARADIGM
+## ð¬ METHODOLOGY: FRACTAL METASCIENCE PARADIGM
 
 ### Four Core Pillars:
 
 **1. NULLO (Zero-Budget Protocol)**
-- Budget: **$0** — no institutional funding
+- Budget: **$0** â no institutional funding
 - Tools: GitHub (free), Zenodo (free), open-source Python
 
 **2. PLT (Plural-Lingual Translation)**
@@ -135,23 +135,23 @@ for term in lexicon['terms']:
 - Iterative refinement through versioning
 
 **4. FMP (Fractal Organization)**
-- Self-similar structure at all scales (micro → meso → macro)
+- Self-similar structure at all scales (micro â meso â macro)
 
 **Full methodology:** [docs/METHODOLOGY.md](docs/METHODOLOGY.md)
 
 ---
 
-## 🎯 RESEARCH APPLICATIONS
+## ð¯ RESEARCH APPLICATIONS
 
-1. **Translation Studies** — Compare Sufi terminology across 9 languages
-2. **Comparative Lexicography** — Persian vs. Turkic patterns
-3. **Computational Stylometry** — Ghazal vs. narrative prose
-4. **Network Analysis** — Mystical concept co-occurrence
-5. **Cross-Cultural Digital Humanities** — Persian-Turkic-Uyghur continuum
+1. **Translation Studies** â Compare Sufi terminology across 9 languages
+2. **Comparative Lexicography** â Persian vs. Turkic patterns
+3. **Computational Stylometry** â Ghazal vs. narrative prose
+4. **Network Analysis** â Mystical concept co-occurrence
+5. **Cross-Cultural Digital Humanities** â Persian-Turkic-Uyghur continuum
 
 ---
 
-## 📖 HOW TO CITE
+## ð HOW TO CITE
 
 ### APA:
 ```
@@ -173,7 +173,7 @@ GitHub. https://github.com/Secret-Uzbek/navoiy-terra-corpus
 
 ---
 
-## 🤝 CONTRIBUTING
+## ð¤ CONTRIBUTING
 
 We welcome contributions from scholars, translators, programmers, and students.
 
@@ -183,7 +183,7 @@ We welcome contributions from scholars, translators, programmers, and students.
 
 ---
 
-## 📜 LICENSE
+## ð LICENSE
 
 **Texts:** Public domain (15th century works)  
 **Annotations & code:** CC BY 4.0  
@@ -191,7 +191,7 @@ We welcome contributions from scholars, translators, programmers, and students.
 
 ---
 
-## 🌐 LINKS
+## ð LINKS
 
 - **FMP Central:** https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO
 - **Author ORCID:** https://orcid.org/0009-0000-6394-4912
@@ -199,26 +199,28 @@ We welcome contributions from scholars, translators, programmers, and students.
 
 ---
 
-## 🗺️ ROADMAP
+## ðºï¸ ROADMAP
 
 ### v1.0 (Current)
-- ✅ 26 texts, 9 languages PLT
-- ✅ Interactive visualization
-- ✅ Methodology paper
+- â 26 texts, 9 languages PLT
+- â Interactive visualization
+- â Methodology paper
 
 ### v1.1 (March 2026)
-- 📚 Layli va Majnun excerpts
-- 🔤 50 annotated terms
-- 🇹🇷 Turkish (10th language)
+- ð Layli va Majnun excerpts
+- ð¤ 50 annotated terms
+- ð¹ð· Turkish (10th language)
 
 ### v2.0 (Q3 2026)
-- 📖 Complete Khamsa
-- 🔢 200+ terms
-- 🔌 REST API
+- ð Complete Khamsa
+- ð¢ 200+ terms
+- ð REST API
 
 ---
 
-**Built with ❤️ in Zarafshan, Uzbekistan 🇺🇿**  
-*Fractal Metascience Paradigm — Zero budget, maximum impact*
+**Built with â¤ï¸ in Tashkent, Uzbekistan ðºð¿**  
+*Fractal Metascience Paradigm â Zero budget, maximum impact*
 
-© 2026 Abdurashid Abdukarimov | CC BY 4.0
+Â© 2026 Abdurashid Abdukarimov | CC BY 4.0
+
+📍 **Исправлено:** Локация изменена на Ташкент (автор находится в Ташкенте)
