@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Simurgh Network — NAVOIY-TERRA v1.1</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+body{margin:0;background:linear-gradient(135deg,#667eea,#764ba2);font-family:sans-serif;overflow:hidden}
+#info{position:absolute;top:20px;left:20px;color:white}
+h1{margin:0;font-size:24px;text-shadow:2px 2px 4px rgba(0,0,0,0.5)}
+p{margin:5px 0 0;font-size:13px;opacity:.9}
+#legend{position:absolute;bottom:20px;right:20px;background:rgba(255,255,255,.95);padding:15px;border-radius:10px}
+#legend h3{margin:0 0 10px;font-size:14px}
+.li{display:flex;align-items:center;margin:6px 0;font-size:12px}
+.dot{width:14px;height:14px;border-radius:50%;margin-right:8px}
+.tooltip{position:absolute;background:rgba(0,0,0,.8);color:white;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:opacity .3s;font-size:12px;max-width:220px}
+</style>
+</head>
+<body>
+<div id="info"><h1>🦅 Simurgh Concept Network</h1><p>NAVOIY-TERRA CORPUS v1.1 | Lisonut-tayr</p></div>
+<div id="legend">
+<h3>Legend</h3>
+<div class="li"><div class="dot" style="background:#FF6B6B"></div>Divine</div>
+<div class="li"><div class="dot" style="background:#4ECDC4"></div>Guide</div>
+<div class="li"><div class="dot" style="background:#F38181"></div>Valley</div>
+<div class="li"><div class="dot" style="background:#95E1D3"></div>Seeker</div>
+<div class="li"><div class="dot" style="background:#AA96DA"></div>Concept</div>
+</div>
+<div class="tooltip" id="tip"></div>
+<svg id="svg"></svg>
+<script>
+const W=window.innerWidth,H=window.innerHeight;
+const svg=d3.select("#svg").attr("width",W).attr("height",H);
+const tip=d3.select("#tip");
+const nodes=[
+{id:"simurgh",l:"Simurgh",t:"divine",r:30,d:"Divine Unity — Si Murgh (30 birds)"},
+{id:"hudhud",l:"Hudhud",t:"guide",r:20,d:"Hoopoe — Spiritual guide (Pir)"},
+{id:"talab",l:"Talab",t:"valley",r:18,d:"Valley 1: Quest"},
+{id:"ishq",l:"Ishq",t:"valley",r:18,d:"Valley 2: Divine Love"},
+{id:"marifat",l:"Ma'rifat",t:"valley",r:18,d:"Valley 3: Gnosis"},
+{id:"istigno",l:"Istig'no",t:"valley",r:18,d:"Valley 4: Detachment"},
+{id:"tawhid",l:"Tawhid",t:"valley",r:18,d:"Valley 5: Unity"},
+{id:"hayrat",l:"Hayrat",t:"valley",r:18,d:"Valley 6: Bewilderment"},
+{id:"fano",l:"Fano",t:"valley",r:18,d:"Valley 7: Annihilation"},
+{id:"bulbul",l:"Bulbul",t:"seeker",r:14,d:"Nightingale — Passionate lover"},
+{id:"vujud",l:"Vujud",t:"concept",r:14,d:"Being — Wahdat al-Wujud"},
+{id:"tajalli",l:"Tajalli",t:"concept",r:14,d:"Manifestation — Divine self-disclosure"},
+{id:"yor",l:"Yor",t:"concept",r:14,d:"Beloved — Divine object of love"},
+{id:"kongul",l:"Ko'ngul",t:"concept",r:14,d:"Heart — Locus of encounter"}
+];
+const links=[
+{s:"hudhud",t:"bulbul"},{s:"bulbul",t:"talab"},
+{s:"talab",t:"ishq"},{s:"ishq",t:"marifat"},
+{s:"marifat",t:"istigno"},{s:"istigno",t:"tawhid"},
+{s:"tawhid",t:"hayrat"},{s:"hayrat",t:"fano"},
+{s:"fano",t:"simurgh"},
+{s:"ishq",t:"yor"},{s:"tawhid",t:"vujud"},
+{s:"fano",t:"tajalli"},{s:"kongul",t:"simurgh"}
+];
+const col={"divine":"#FF6B6B","guide":"#4ECDC4","valley":"#F38181","seeker":"#95E1D3","concept":"#AA96DA"};
+const sim=d3.forceSimulation(nodes)
+.force("link",d3.forceLink(links).id(d=>d.id).distance(130))
+.force("charge",d3.forceManyBody().strength(-280))
+.force("center",d3.forceCenter(W/2,H/2))
+.force("col",d3.forceCollide().radius(d=>d.r+10));
+const link=svg.append("g").selectAll("line").data(links).join("line")
+.attr("stroke","#ccc").attr("stroke-width",1.5).attr("stroke-opacity",.6);
+const node=svg.append("g").selectAll("g").data(nodes).join("g")
+.style("cursor","pointer")
+.call(d3.drag()
+.on("start",(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y})
+.on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y})
+.on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+node.append("circle").attr("r",d=>d.r).attr("fill",d=>col[d.t]).attr("stroke","white").attr("stroke-width",2);
+node.append("text").text(d=>d.l).attr("text-anchor","middle").attr("dy",d=>-d.r-6)
+.attr("fill","white").style("font-size","11px").style("font-weight","600")
+.style("text-shadow","0 0 3px rgba(0,0,0,.8)");
+node.on("mouseover",(e,d)=>{tip.style("opacity",1).html("<strong>"+d.l+"</strong><br>"+d.d)
+.style("left",(e.pageX+10)+"px").style("top",(e.pageY-10)+"px")})
+.on("mouseout",()=>tip.style("opacity",0));
+sim.on("tick",()=>{
+link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
+.attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+node.attr("transform",d=>`translate(${d.x},${d.y})`);
+});
+</script>
+</body>
+</html>
