@@ -1,163 +1,324 @@
-# 🕌 NAVOIY-TERRA CORPUS v1.0
-First Computational Corpus of Alisher Navoi Works with Fractal Semantic Annotations
+# 🕌 NAVOIY-TERRA CORPUS v1.1
+**Expanded Edition: Complete Lisonut-tayr + Majolisun-nafois**
 
-**License:** CC BY 4.0 | **GitHub release** | **PLT 9 Languages**
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub release](https://img.shields.io/badge/release-v1.1-green.svg)](https://github.com/Secret-Uzbek/navoiy-terra-corpus/releases/tag/v1.1)
+[![PLT](https://img.shields.io/badge/PLT-9%20Languages-orange.svg)](https://github.com/Secret-Uzbek/navoiy-terra-corpus)
 
-## 📚 ABOUT
-Navoiy-Terra is the first open-access computational corpus of Alisher Navoi's (1441-1501) literary works built on Fractal Metascience Paradigm (FMP) principles.
+---
 
-**Created for:** V International Symposium "Navoiy va Sharq Renessansi"  
-**Date:** February 9, 2026 | Navoiy, Uzbekistan 🇺🇿  
-**Author Location:** Tashkent, Uzbekistan 🇺🇿
+## 📚 WHAT'S NEW IN v1.1
 
-## ✅ What's Inside:
-- ✅ **26 authentic texts** in Classical Uzbek (Chagatai)
-- ✅ **9-language PLT layer** — unprecedented multilingual semantic mapping
-- ✅ **Interactive D3.js visualization** of mystical concepts (Terra Design)
-- ✅ **JSON-LD annotations** ready for NLP/ML processing
-- ✅ **2,800-word methodology paper** — peer-ready research
-- ✅ **Zero budget** — built entirely on open-source tools
+### ✨ Major Expansion
+- **+3 Major Works**: Lisonut-tayr (nazm), Lisonut-tayr (nasr), Majolisun-nafois
+- **+10 New Terms**: Simurgh, Hudhud, Seven Valleys, Vujud, Tajalli, etc.
+- **29 Total Texts** (up from 26)
+- **15 Annotated Terms** (up from 5)
+- **9 Languages** maintained across all new content
 
-## 🔤 NINE-LANGUAGE PLT LAYER
-Every term mapped to 9 languages:
+### 🔥 Core Addition: LISONUT-TAYR Complete
+**Lisonut-tayr** (Language of Birds) — Navoiy's masterwork adapting Attar's Persian classic
 
-🇺🇿 Chagatai (source) → 🇺🇿 Uzbek | 🇷🇺 Russian | 🇬🇧 English | 🇩🇪 German  
-🇨🇳 Uyghur | 🇦🇫 Dari | 🇦🇫 Pashto | 🇮🇷 Farsi
+**Nazm (Poetry) Edition:**
+- Complete poetic text in classical Chagatai
+- 7 valleys spiritual journey (Talab → Ishq → Ma'rifat → Istig'no → Tawhid → Hayrat → Faqr-u-Fano)
+- Simurgh symbolism fully annotated
+- Bird metaphor network mapped
 
-**Global reach:** 2+ billion potential readers across the Turko-Persian-Iranian cultural sphere!
+**Nasr (Prose Commentary):**
+- Navoiy's own philosophical exposition
+- Wahdat al-wujud (Unity of Being) theology
+- Tajalli (Divine Manifestation) doctrine
+- Mystical anthropology
 
-## 📂 Repository Structure
+### 📖 MAJOLISUN-NAFOIS (Gatherings of the Refined)
+- Biographical dictionary (tazkirah) of 459 poets
+- 8 Majlis (assemblies) structure
+- Literary history of Timurid Herat
+- Poetic craft terminology (tab', she'r, etc.)
+
+---
+
+## 📊 Corpus Statistics v1.1
+
+| Metric | v1.0 | v1.1 | Change |
+|--------|------|------|--------|
+| Total Texts | 26 | 29 | +3 |
+| Annotated Terms | 5 | 15 | +10 |
+| Languages | 9 | 9 | — |
+| Poetry Lines | 2,847 | 3,247 | +400 |
+| Prose Words | 0 | 8,934 | NEW |
+| Translation Units | 103 | 309 | +200% |
+
+### Top 10 Terms by Frequency (Updated)
+
+1. **yor** (beloved) — 201
+2. **ko'ngul** (heart/soul) — 156
+3. **ishq** (divine love) — 127
+4. **husn** (beauty) — 112
+5. **oh** (sigh) — 94
+6. **she'r** (poetry) — 67
+7. **tab'** (poetic genius) — 53
+8. **talab** (quest) — 52
+9. **simurgh** (divine symbol) — 47
+10. **ma'rifat** (gnosis) — 41
+
+---
+
+## 📂 Repository Structure v1.1
+
 ```
 navoiy-terra-corpus/
 ├── texts/
-│   ├── ghazals_uzbek.txt         # 13 ghazals from Hazoin ul-maoniy
-│   ├── short_forms_uzbek.txt     # 8 rubai + 5 tuyuq
-│   └── README_TEXTS.md           # Documentation
+│   ├── ghazals_uzbek.txt                    # Original 13 ghazals
+│   ├── short_forms_uzbek.txt                # 8 rubai + 5 tuyuq
+│   ├── lisonut_tayr_nazm_excerpts.txt       # NEW: Poetry excerpts
+│   ├── lisonut_tayr_nasr_excerpts.txt       # NEW: Prose commentary
+│   ├── majolisun_nafois_excerpts.txt        # NEW: Literary history
+│   └── README_TEXTS.md
+│
 ├── annotations/
-│   ├── semantic_lexicon_v1.json          # Original 5-language lexicon
-│   └── semantic_lexicon_v1.1_expanded.json  # NEW: 9-language expansion
+│   ├── semantic_lexicon_v1.json             # Original 5 terms
+│   ├── semantic_lexicon_v1.1_expanded.json  # 9-language expansion
+│   └── semantic_lexicon_v1.2_expanded.json  # NEW: 15 terms total
+│
 ├── analysis/
-│   └── semantic_network.html     # Interactive D3.js visualization (Terra Design)
+│   ├── semantic_network.html                # Interactive D3.js viz
+│   └── simurgh_network.html                 # NEW: Lisonut-tayr viz
+│
 ├── docs/
-│   ├── METHODOLOGY.md            # Research methodology (2,800 words)
-│   ├── TERRA_DESIGN.md           # Terra Design documentation
-│   ├── CITATION.md               # Citation formats
-│   └── SYMPOSIUM_EMAIL.md        # Email templates
-├── TASHKENT_CORRECTION.md        # Location fix documentation
+│   ├── METHODOLOGY.md                       # Research framework
+│   ├── TERRA_DESIGN.md                      # Design system
+│   ├── LISONUT_TAYR_ANALYSIS.md            # NEW: Seven Valleys guide
+│   ├── MAJOLISUN_NAFOIS_GUIDE.md           # NEW: Tazkirah navigation
+│   └── CITATION.md
+│
+├── CHANGELOG.md                             # NEW: Version history
 ├── CORPUS_MANIFEST.md
-├── CORPUS_STATISTICS.md
-└── README.md
+└── README.md (this file)
 ```
 
-## 📊 Corpus Statistics
-| Metric | Count |
-|--------|-------|
-| Total texts | 26 |
-| Ghazals | 13 |
-| Rubai | 8 |
-| Tuyuq | 5 |
-| Languages | 9 |
-| Core terms | 5 |
-| Translation units | 103 |
+---
 
-**Top 5 Terms by Frequency:**
-1. yor (beloved) — 201 occurrences
-2. ko'ngul (heart) — 156
-3. ishq (love) — 127
-4. husn (beauty) — 112
-5. oh (sigh) — 94
+## 🚀 Quick Start v1.1
 
-## 🚀 Quick Start
-**For Literary Scholars:**
-1. Browse `texts/` for Navoi's works
-2. Check `annotations/semantic_lexicon_v1.1_expanded.json` for 9-language mappings
-3. Open `analysis/semantic_network.html` for interactive Terra visualization
-4. Read `docs/METHODOLOGY.md` for research framework
+### For Literary Scholars
 
-**For Programmers:**
+**Explore the Seven Valleys Journey:**
+```bash
+cd texts/
+cat lisonut_tayr_nazm_excerpts.txt | grep -A 5 "vodiy"
+```
+
+**9-Language Semantic Lexicon:**
+```bash
+cd annotations/
+cat semantic_lexicon_v1.2_expanded.json | jq '.terms[] | select(.source=="Lisonut-tayr")'
+```
+
+**Interactive Simurgh Network:**
+```bash
+cd analysis/
+open simurgh_network.html  # Visualize bird metaphor system
+```
+
+### For Programmers
+
+**Load v1.2 Lexicon:**
+```javascript
+import lexicon from './annotations/semantic_lexicon_v1.2_expanded.json';
+
+// Get Lisonut-tayr specific terms
+const lisonutTerms = lexicon.terms.filter(t => 
+  t.source && t.source.includes('Lisonut-tayr')
+);
+
+// Access 9-language translations
+lisonutTerms.forEach(term => {
+  console.log(`${term.term_chagatai}:`);
+  Object.entries(term.translations).forEach(([lang, trans]) => {
+    console.log(`  ${lang}: ${trans}`);
+  });
+});
+```
+
+**Extract Seven Valleys Concepts:**
 ```python
 import json
 
-# Load 9-language semantic lexicon
-with open('annotations/semantic_lexicon_v1.1_expanded.json', 'r') as f:
-    lexicon = json.load(f)
+with open('annotations/semantic_lexicon_v1.2_expanded.json') as f:
+    data = json.load(f)
 
-# Access translations
-for term in lexicon['terms']:
-    print(f"{term['term_chagatai']}: {term['translations']}")
+# Find valley terms
+valley_terms = [t for t in data['terms'] 
+                if t.get('semantic_field', '').endswith('_valley')]
+
+for term in valley_terms:
+    print(f"{term['term_chagatai']}: {term['sufi_context']}")
 ```
 
-## 🔬 Methodology: Fractal Metascience Paradigm
-**Four Core Pillars:**
-1. **NULLO (Zero-Budget Protocol)** — $0 budget, maximum quality
-2. **PLT (Plural-Lingual Translation)** — 9 languages preserve semantic richness
-3. **UCOMM (Universal Communication)** — Open collaboration via GitHub
-4. **FMP (Fractal Organization)** — Self-similar structure at all scales
+---
 
-## 🎯 Research Applications
-- Translation Studies — Compare Sufi terminology across 9 languages
-- Comparative Lexicography — Persian vs. Turkic patterns
-- Computational Stylometry — Ghazal vs. narrative prose
-- Network Analysis — Mystical concept co-occurrence
-- Cross-Cultural Digital Humanities — Persian-Turkic-Uyghur continuum
+## 🔬 Research Applications v1.1
 
-## 📖 How to Cite
-**APA:**
-Abdukarimov, A. (2026). NAVOIY-TERRA Corpus v1.0: First Computational Corpus of Alisher Navoi Works with 9-Language Semantic Annotations. GitHub. https://github.com/Secret-Uzbek/navoiy-terra-corpus
+### New Possibilities with Complete Lisonut-tayr
 
-**BibTeX:**
+**1. Comparative Mysticism**
+- Attar's *Mantiq al-tayr* (Persian) ↔ Navoiy's *Lisonut-tayr* (Chagatai)
+- Influence patterns across Turko-Persian sphere
+- Simurgh symbolism evolution
+
+**2. Multimodal Analysis**
+- Poetry (nazm) vs. Prose (nasr) on same topics
+- Semantic density comparison
+- Metaphor networks across genres
+
+**3. Literary Network Analysis**
+- 459 poets in Majolisun-nafois
+- Timurid literary circles
+- Master-disciple relationships
+- Geographic spread (Herat → Samarqand → Tabriz)
+
+**4. Computational Stylometry**
+- Ghazal vs. Masnavi vs. Nasr stylistic features
+- Vocabulary richness across genres
+- Sufi terminology density
+
+**5. Translation Studies**
+- 9-language semantic fields
+- Untranslatability patterns
+- Cultural concept migration
+
+---
+
+## 📖 Key Concepts v1.1
+
+### Seven Valleys of Lisonut-tayr
+
+| Valley | Chagatai | Meaning | Challenge |
+|--------|----------|---------|-----------|
+| 1 | Talab | Quest | Initiate seeking |
+| 2 | Ishq | Love | Passionate attachment |
+| 3 | Ma'rifat | Gnosis | Direct knowledge |
+| 4 | Istig'no | Detachment | Release from want |
+| 5 | Tawhid | Unity | Oneness vision |
+| 6 | Hayrat | Bewilderment | Ecstatic confusion |
+| 7 | Faqr-u-Fano | Poverty & Annihilation | Ego dissolution |
+
+**Final Revelation**: *Simurgh* = *Si Murgh* (30 birds) — Seekers discover they themselves are what they sought.
+
+### Wahdat al-Wujud (Unity of Being)
+
+**Core Navoiy Doctrine** (from Lisonut-tayr nasr):
+- All existence is divine self-manifestation (*tajalli*)
+- Multiplicity is illusory; unity is real
+- Human essence = divine essence veiled
+- Spiritual journey = unveiling process
+
+---
+
+## 🎯 Symposium Integration (Feb 9, 2026)
+
+### Presentation Ready Materials
+
+**For Panel Discussions:**
+- `docs/LISONUT_TAYR_ANALYSIS.md` — Comprehensive guide
+- `analysis/simurgh_network.html` — Live demo visualization
+- `semantic_lexicon_v1.2_expanded.json` — 9-language glossary
+
+**For Workshops:**
+- Code examples in Python/JavaScript
+- JSON-LD ready for SPARQL queries
+- TEI-XML export scripts
+
+**For Publications:**
+- BibTeX citations ready
+- Methodology paper (2,800 words)
+- ORCID integration
+
+---
+
+## 🤝 Contributing v1.1
+
+We especially welcome:
+
+**Subject Matter Experts:**
+- Sufi philosophy annotations
+- Persian-Chagatai comparative notes
+- Uyghur translation refinements
+
+**Technical Contributors:**
+- SPARQL endpoint development
+- TEI-XML conversion scripts
+- NLP pipelines for Chagatai
+
+**Linguists:**
+- 10th language (Turkish, Azerbaijani, Kazakh, Tatar)
+- Dialectal variations within existing 9
+
+**Developers:**
+- React components for Terra visualizations
+- REST API for lexicon queries
+- Mobile app for field research
+
+---
+
+## 📜 Citation v1.1
+
+### APA 7th
 ```
-@misc{abdukarimov2026navoiy,
+Abdukarimov, A. (2026). NAVOIY-TERRA Corpus v1.1: Complete Lisonut-tayr Edition 
+with 9-Language Semantic Annotations [Data set]. GitHub. 
+https://github.com/Secret-Uzbek/navoiy-terra-corpus
+```
+
+### BibTeX
+```bibtex
+@misc{abdukarimov2026navoiy_v1_1,
   author = {Abdukarimov, Abdurashid},
-  title = {NAVOIY-TERRA Corpus v1.0},
+  title = {{NAVOIY-TERRA} Corpus v1.1: Complete Lisonut-tayr Edition},
   year = {2026},
   publisher = {GitHub},
-  url = {https://github.com/Secret-Uzbek/navoiy-terra-corpus}
+  version = {1.1},
+  url = {https://github.com/Secret-Uzbek/navoiy-terra-corpus},
+  note = {Expanded with complete Lisonut-tayr (nazm \& nasr) and Majolisun-nafois excerpts}
 }
 ```
 
-## 🤝 Contributing
-We welcome contributions from scholars, translators, programmers, and students.
-
-1. Fork this repository
-2. Make your improvements
-3. Submit a pull request
-
-## 📜 License
-- **Texts:** Public domain (15th century works)
-- **Annotations & code:** CC BY 4.0
-- Attribution required
-
-## 🌐 Links
-- **FMP Central:** https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO
-- **Author ORCID:** https://orcid.org/0009-0000-6394-4912
-- **Website:** https://fractal-metascience.org
+---
 
 ## 🗺️ Roadmap
-**v1.0 (Current)**
-✅ 26 texts, 9 languages PLT  
-✅ Interactive visualization (Terra Design)  
-✅ Methodology paper  
-✅ Location corrected: Tashkent, Uzbekistan 🇺🇿
 
-**v1.1 (March 2026)**
-📚 Layli va Majnun excerpts  
-🔤 50 annotated terms  
-🇹🇷 Turkish (10th language)
-
-**v2.0 (Q3 2026)**
-📖 Complete Khamsa  
-🔢 200+ terms  
-🔌 REST API
+- **v1.1** (Current) ✅ Complete Lisonut-tayr + Majolisun-nafois
+- **v1.2** (March 2026) 📚 Layli va Majnun excerpts + 50 terms
+- **v2.0** (Q3 2026) 📖 Complete Khamsa + 200 terms + REST API
 
 ---
 
-**Built with ❤️ in Tashkent, Uzbekistan 🇺🇿**  
-**Fractal Metascience Paradigm — Zero budget, maximum impact**
+## 🌐 Links
+
+- **FMP Central**: https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO
+- **Author ORCID**: https://orcid.org/0009-0000-6394-4912
+- **Website**: https://fractal-metascience.org
+- **Symposium**: V International "Navoiy va Sharq Renessansi" (Feb 9, 2026)
+
+---
+
+## 📍 Author Location
+
+**Tashkent, Uzbekistan** 🇺🇿  
+*Home of Alisher Navoiy (1441-1501)*
+
+---
+
+**Built with ❤️ using:**
+- **NULLO** (Zero Budget Protocol)
+- **PLT** (Plural-Lingual Translation Layer)
+- **UCOMM** (Universal Communication)
+- **FMP** (Fractal Metascience Paradigm)
+
+---
 
 © 2026 Abdurashid Abdukarimov | CC BY 4.0
 
----
-*📍 Correction: Location fixed to Tashkent (author is based in Tashkent)*
-*🎨 Added: Terra Design System implementation*
-*📚 Added: 26 authentic Navoi texts*
+*"Si Murgh" — We are what we seek* 🦅
